@@ -11,6 +11,8 @@
 
         Fish randomFish2 = new Fish();
 
+        Fish randomFish3 = new Fish();
+
         Starfish randomStarfish = new Starfish();
 
         Starfish randomStarfish2 = new Starfish();
@@ -41,13 +43,15 @@
           fill(TAN);
           rect(0,350,400,50);  
 
+          randomStarfish.moveStarfish();
+
+          randomStarfish2.moveStarfish();
+
           randomFish.moveFish();
 
           randomFish2.moveFish();
 
-          randomStarfish.moveStarfish();
-
-          randomStarfish2.moveStarfish();
+          randomFish3.moveFish();
 
           randomEel.moveEel();
 
