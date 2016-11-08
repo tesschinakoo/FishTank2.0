@@ -85,7 +85,7 @@
 
               tailColor = color(random(0,255),random(0,255),random(0,255));
 
-              speed = 2;
+              speed = 2.7;
            }
 
            void moveFish()
@@ -161,11 +161,11 @@
 
             void update()
             {
-              x1 += speed;
+              x1 -= speed;
 
-              if (x1 > 440)
+              if (x1 < -40)
               {
-                x1 = -40;
+                x1 = 440;
               }
 
             }
@@ -217,11 +217,11 @@
 
             void update()
             {
-              centerX += speed;
+              centerX -= speed;
 
-              if (centerX > 440)
+              if (centerX < -40)
               {
-                centerX = -40;
+                centerX = 440;
               }
 
             }
@@ -252,4 +252,3 @@
     <canvas id="mycanvas"></canvas>
   </body>
 </html>
-    
