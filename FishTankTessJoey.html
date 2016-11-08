@@ -1,8 +1,8 @@
 <html>
-	<head>
-		<title>FishTank 2.0</title>
-		<script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
-		<script type="text/processing" data-processing-target="mycanvas">
+  <head>
+    <title>FishTank 2.0</title>
+    <script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
+    <script type="text/processing" data-processing-target="mycanvas">
         //Your code goes here 
         
         // Declare and contruct two objects (h1, h2) from the class HorizontalLine  
@@ -37,15 +37,9 @@
         void draw() { 
         
           background(BLUE); //needed in the draw function to "clear" the screen between updates
-<<<<<<< HEAD
-=======
 
           fill(TAN);
-          rect(0,360,400,40);  
->>>>>>> bf08357f0ac5a5ebddeb60ed18de8c7a8bf65cdb
-
-          fill(TAN);
-          rect(0,360,400,40);  
+          rect(0,350,400,50);  
 
           randomFish.moveFish();
 
@@ -53,23 +47,11 @@
 
           randomStarfish.moveStarfish();
 
-<<<<<<< HEAD
           randomStarfish2.moveStarfish();
 
           randomEel.moveEel();
 
           randomEel2.moveEel();
-=======
-          randomFish2.drawFish();
-
-          randomStarfish.drawStarfish();
-
-          randomStarfish2.drawStarfish();
-
-          randomEel.drawEel();
-
-          randomEel2.drawEel();
->>>>>>> bf08357f0ac5a5ebddeb60ed18de8c7a8bf65cdb
         
         } 
         
@@ -84,29 +66,29 @@
         class Fish
         {
 
-	          // attriubutes
-	          var centerX, centerY, bodyLength, bodyHeight, bodyColor, tailColor, speed;
+            // attriubutes
+            var centerX, centerY, bodyLength, bodyHeight, bodyColor, tailColor, speed;
 
-	          //constructor
-	          Fish()
-	         {
-	            
-	            centerX = random(30,370);
+            //constructor
+            Fish()
+           {
+              
+              centerX = random(30,370);
 
-	            centerY = random(30,350);
+              centerY = random(30,350);
 
-	            bodyLength = random(20,50);
+              bodyLength = random(20,50);
 
-	            bodyHeight = random (20, 50);
+              bodyHeight = random (20, 50);
 
-	            bodyColor = color(random(0,255),random(0,255),random(0,255));
+              bodyColor = color(random(0,255),random(0,255),random(0,255));
 
-	            tailColor = color(random(0,255),random(0,255),random(0,255));
+              tailColor = color(random(0,255),random(0,255),random(0,255));
 
-	            speed = 2;
-	         }
+              speed = 2;
+           }
 
-	         void moveFish()
+           void moveFish()
             {
               update();
               drawFish();
@@ -118,18 +100,15 @@
 
               if (centerX > 440)
               {
-              	centerX = -40;
+                centerX = -40;
               }
 
             }
 
-<<<<<<< HEAD
-	         void drawFish()
+           void drawFish()
 
-	         {
+           {
 
-=======
->>>>>>> bf08357f0ac5a5ebddeb60ed18de8c7a8bf65cdb
                 noStroke();
                 fill(bodyColor);
                 // body
@@ -154,27 +133,27 @@
 
          {
 
-         	//attributes
-         	var x1, y1, strokeColor, lineThickness, speed;
+          //attributes
+          var x1, y1, strokeColor, lineThickness, speed;
 
-         	//constructor
-         	Starfish()
+          //constructor
+          Starfish()
 
-         	{
-         		x1 = random(20,380);
+          {
+            x1 = random(20,380);
 
-         		y1 = random(340,360);
+            y1 = random(340,360);
 
-         		strokeColor = color(random(0,360),random(0,360),random(0,360));
+            strokeColor = color(random(0,360),random(0,360),random(0,360));
 
-         		lineThickness = random(5,8);
+            lineThickness = random(5,8);
 
-         		speed = .1;
+            speed = .1;
 
 
-         	}
+          }
 
-         	void moveStarfish()
+          void moveStarfish()
             {
               update();
               drawStarfish();
@@ -186,21 +165,21 @@
 
               if (x1 > 440)
               {
-              	x1 = -40;
+                x1 = -40;
               }
 
             }
 
-         	void drawStarfish()
+          void drawStarfish()
 
-         	{
-         		stroke(strokeColor);
+          {
+            stroke(strokeColor);
                 strokeWeight(lineThickness);
                 line(x1, y1, x1, y1+25);
                 line(x1+15,y1+22,x1-15,y1+5);
                 line(x1+14,y1+5,x1-16,y1+21);
 
-         	}
+          }
 
          }
 
@@ -208,29 +187,29 @@
 
          {
 
-         	//attributes
-         	var centerX, centerY, bodyLength, bodyHeight, bodyColor, speed;
+          //attributes
+          var centerX, centerY, bodyLength, bodyHeight, bodyColor,speed;
 
-         	//constructor
-         	Eel()
+          //constructor
+          Eel()
 
-         	{
+          {
 
-         		centerX = random(50,350);
+            centerX = random(50,350);
 
-         		centerY = random(50,350);
+            centerY = random(50,350);
 
-         		bodyLength = random(60,90);
+            bodyLength = random(60,90);
 
-         		bodyHeight = random(10,15);
+            bodyHeight = random(10,15);
 
-         		bodyColor = color(random(0,360),random(0,360),random(0,360));
+            bodyColor = color(random(0,360),random(0,360),random(0,360));
 
-         		speed = 1
+            speed = 1
 
-         	}
+          }
 
-         	void moveEel()
+          void moveEel()
             {
               update();
               drawEel();
@@ -242,16 +221,16 @@
 
               if (centerX > 440)
               {
-              	centerX = -40;
+                centerX = -40;
               }
 
             }
 
-         	void drawEel()
+          void drawEel()
 
-         	{
-         		noStroke();
-         		fill(bodyColor);
+          {
+            noStroke();
+            fill(bodyColor);
                 // body
                 ellipse(centerX, centerY, bodyLength, bodyHeight);
                 // eye
@@ -259,83 +238,7 @@
                 ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
 
 
-         	}
-
-
-         }
-
-         class Starfish
-
-         {
-
-         	//attributes
-         	var x1, y1, strokeColor, lineThickness;
-
-         	//constructor
-         	Starfish()
-
-         	{
-         		x1 = random(20,380);
-
-         		y1 = random(340,360);
-
-         		strokeColor = color(random(0,360),random(0,360),random(0,360));
-
-         		lineThickness = random(5,8);
-
-
-         	}
-
-         	void drawStarfish()
-
-         	{
-         		stroke(strokeColor);
-                strokeWeight(lineThickness);
-                line(x1, y1, x1, y1+25);
-                line(x1+15,y1+22,x1-15,y1+5);
-                line(x1+14,y1+5,x1-16,y1+21);
-
-         	}
-
-         }
-
-         class Eel
-
-         {
-
-         	//attributes
-         	var centerX, centerY, bodyLength, bodyHeight, bodyColor;
-
-         	//constructor
-         	Eel()
-
-         	{
-
-         		centerX = random(50,350);
-
-         		centerY = random(50,350);
-
-         		bodyLength = random(60,90);
-
-         		bodyHeight = random(10,20);
-
-         		bodyColor = color(random(0,360),random(0,360),random(0,360));
-
-         	}
-
-         	void drawEel()
-
-         	{
-         		noStroke();
-         		fill(bodyColor);
-                // body
-                ellipse(centerX, centerY, bodyLength, bodyHeight);
-                // eye
-                fill(33, 33, 33);
-                ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
-
-
-         	}
+          }
 
 
          }
@@ -346,7 +249,7 @@
     </head>
     
     <body>
-		<canvas id="mycanvas"></canvas>
-	</body>
+    <canvas id="mycanvas"></canvas>
+  </body>
 </html>
     
