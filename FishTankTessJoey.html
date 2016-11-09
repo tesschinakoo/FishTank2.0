@@ -7,19 +7,11 @@
         
         // Declare and contruct two objects (h1, h2) from the class HorizontalLine  
 
-        Fish randomFish = new Fish();
+        ArrayList fishList;
 
-        Fish randomFish2 = new Fish();
+        ArrayList eelList;
 
-        Fish randomFish3 = new Fish();
-
-        Starfish randomStarfish = new Starfish();
-
-        Starfish randomStarfish2 = new Starfish();
-
-        Eel randomEel = new Eel();
-
-        Eel randomEel2 = new Eel();
+        ArrayList starfishList;
         
         //since these are variables we don't want to ever change in the code, we capitalize them 
         var WINDOW_WIDTH = 400;
@@ -27,11 +19,31 @@
         var BLUE = color(150,210,240);
         var TAN = color(230,235,202);
         //This function only runs once at the start of the program
+        
+
         void setup() {
           size(WINDOW_WIDTH, WINDOW_HEIGHT); //sets the size of the window
         
           frameRate(30); //how many times the draw function is called per second
-        
+
+          fishList = new ArrayList();
+
+          fishList.add(new Fish());
+
+          fishList.add(new Fish());
+
+          
+          eelList = new ArrayList();
+
+          eelList.add(new Eel());
+
+          
+          starfishList = new ArrayList();
+
+          starfishList.add(new Starfish());
+
+
+                  
         }
         
         
@@ -41,21 +53,40 @@
           background(BLUE); //needed in the draw function to "clear" the screen between updates
 
           fill(TAN);
-          rect(0,350,400,50);  
+          noStroke();
+          rect(0,350,400,50); 
 
-          randomStarfish.moveStarfish();
+          for (int i = fishList.size()-1; i >= 0; i--)
 
-          randomStarfish2.moveStarfish();
+          {
+
+          Fish randomFish = (Fish) fishList.get(i);
 
           randomFish.moveFish();
 
-          randomFish2.moveFish();
+          }
 
-          randomFish3.moveFish();
+          
+          for (int i = eelList.size()-1; i >= 0; i--)
+
+          {
+
+          Eel randomEel = (Eel) eelList.get(i);
 
           randomEel.moveEel();
 
-          randomEel2.moveEel();
+          }
+
+
+          for (int i = starfishList.size()-1; i >= 0; i--)
+
+          {
+
+          Starfish randomStarfish = (Starfish) starfishList.get(i);
+
+          randomStarfish.moveStarfish();
+
+          }
         
         } 
         
