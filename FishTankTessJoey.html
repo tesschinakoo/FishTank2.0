@@ -26,21 +26,44 @@
         
           frameRate(30); //how many times the draw function is called per second
 
-          fishList = new ArrayList();
-
-          fishList.add(new Fish());
-
-          fishList.add(new Fish());
-
           
           eelList = new ArrayList();
+          
+          var loopNumber = 30;
 
-          eelList.add(new Eel());
+          while (loopNumber<200)
+            {
+
+              eelList.add(new Eel());
+              loopNumber += random(30,60);
+
+            }
 
           
           starfishList = new ArrayList();
 
-          starfishList.add(new Starfish());
+          var loopNumber = 30;
+
+          while (loopNumber<100)
+            {
+
+              starfishList.add(new Starfish());
+              loopNumber += random(20,60);
+
+            }
+
+
+          fishList = new ArrayList();
+
+          var loopNumber = 30;
+
+          while (loopNumber<200)
+            {
+
+              fishList.add(new Fish());
+              loopNumber += random(30,60);
+
+            }
 
 
                   
